@@ -1,23 +1,87 @@
 aid: land-information-new-zealand-linz
+
 name: Land Information New Zealand (LINZ)
+
+image: https://www.linz.govt.nz/sites/default/files/styles/social_media/public/static/linz-home-page_social.jpg
+
 description: 'Land Information New Zealand (LINZ) is a company surfaced via the API Evangelist harvest
   backlog (source: vc-portfolio) and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/land-information-new-zealand-linz/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
-- Company
-apis: []
+- Property information
+- Crown land management
+- Overseas investment regulation
+- Land registration
+- Geospatial data
+- Mapping
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/land-information-new-zealand-linz-well-known.yml
+- type: Hosts
+  url: hosts/land-information-new-zealand-linz-hosts.yml
+- type: Vendors
+  url: vendors/land-information-new-zealand-linz-vendors.yml
+- type: SDKs
+  url: packages/land-information-new-zealand-linz-packages.yml
+- type: Packages
+  url: packages/land-information-new-zealand-linz-packages.yml
+- type: SignUp
+  url: https://www.linz.govt.nz/resources/oia-release/registered-notices-pursuant-section-111a-national-roads-act-1953
+- type: Security
+  url: https://www.linz.govt.nz/guidance/landonline-support/digital-certificates-remote-access-tool-and-security/security
+- type: PrivacyPolicy
+  url: https://www.linz.govt.nz/privacy
+- type: Pricing
+  url: https://www.linz.govt.nz/guidance/survey/plans-supporting-notice-intention-take-land-under-section-23-public-works-act-1981
+- type: Newsroom
+  url: https://www.linz.govt.nz/news
+- type: GitHubOrganization
+  url: https://github.com/linz
+- type: DomainSecurity
+  url: security/land-information-new-zealand-linz-domain-security.yml
 - type: Website
   url: http://www.linz.govt.nz
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-23'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://lrs.linz.govt.nz/mcp
+    status: 403
+  - url: http://www.linz.govt.nz
+    status: 200
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

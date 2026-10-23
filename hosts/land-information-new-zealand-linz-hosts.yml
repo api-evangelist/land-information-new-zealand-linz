@@ -1,0 +1,87 @@
+generated: '2026-10-23'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 5
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - data
+  - docs
+  - other
+  - source
+  - website
+hosts:
+- host: api.govt.nz
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: govt.nz
+  role: api
+  relation: own
+- host: data.linz.govt.nz
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: govt.nz
+  role: data
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: lrs.linz.govt.nz
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: govt.nz
+  role: other
+  relation: own
+- host: www.doc.govt.nz
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: govt.nz
+  role: docs
+  relation: own
+- host: www.linz.govt.nz
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - SignUp
+  - Security
+  - PrivacyPolicy
+  - Pricing
+  - Newsroom
+  - Website
+  serves:
+  - cdn
+  vendor: cloudfront
+  registrable_domain: govt.nz
+  role: website
+  relation: own
